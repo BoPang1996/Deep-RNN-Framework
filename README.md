@@ -1,6 +1,6 @@
 # Deep RNN Framework
 
-This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://github.com/BoPang1996/Deep-RNN-Framework/) by Bo Pang, Kaiwen Zha, Hanwen Cao, and Chen Shi.
+This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, and Chen Shi.
 
 Please follow the instructions to run the code.
 
