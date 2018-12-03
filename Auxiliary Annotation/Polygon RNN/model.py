@@ -122,15 +122,15 @@ class PolygonNet(nn.Module):
 		# but actually we replace the ConvLSTM cell to RBM cell.
 
 		# =================================  2-LAYER RBM VERSION  =================================
-		self.convlstm = RBM(input_size=(28, 28),
-		                    input_dim=131,
-		                    hidden_dim=[64, 8],
-		                    kernel_size=(3, 3),
-		                    num_layers=2,
-		                    p_TD=0.5,
-		                    batch_first=True,
-		                    bias=True,
-		                    return_all_layers=True)
+		# self.convlstm = RBM(input_size=(28, 28),
+		#                     input_dim=131,
+		#                     hidden_dim=[64, 8],
+		#                     kernel_size=(3, 3),
+		#                     num_layers=2,
+		#                     p_TD=0.5,
+		#                     batch_first=True,
+		#                     bias=True,
+		#                     return_all_layers=True)
 		# =================================  5-LAYER RBM VERSION  =================================
 		# self.convlstm = RBM(input_size=(28, 28),
 		#                     input_dim=131,
@@ -152,16 +152,16 @@ class PolygonNet(nn.Module):
 		#                     bias=True,
 		#                     return_all_layers=True)
 		# =================================  15-LAYER RBM VERSION  =================================
-		# self.convlstm = RBM(input_size=(28, 28),
-		#                     input_dim=131,
-		#                     # hidden_dim=[256, 256, 128, 128, 128, 128, 64, 64, 64, 64, 64, 64, 32, 32, 8],
-		#                     hidden_dim=[128, 128, 128, 128, 128, 128, 128, 128, 128, 64, 64, 64, 32, 32, 8],
-		#                     kernel_size=(3, 3),
-		#                     num_layers=15,
-		#                     p_TD=0.5,
-		#                     batch_first=True,
-		#                     bias=True,
-		#                     return_all_layers=True)
+		self.convlstm = RBM(input_size=(28, 28),
+		                    input_dim=131,
+		                    # hidden_dim=[256, 256, 128, 128, 128, 128, 64, 64, 64, 64, 64, 64, 32, 32, 8],
+		                    hidden_dim=[128, 128, 128, 128, 128, 128, 128, 128, 128, 64, 64, 64, 32, 32, 8],
+		                    kernel_size=(3, 3),
+		                    num_layers=15,
+		                    p_TD=0.5,
+		                    batch_first=True,
+		                    bias=True,
+		                    return_all_layers=True)
 
 		self.init_weights(load_vgg=load_vgg)
 
