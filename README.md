@@ -1,6 +1,6 @@
 # Deep RNN Framework
 
-This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://github.com/BoPang1996/Deep-RNN-Framework/) by Bo Pang, Kaiwen Zha, Hanwen Cao, and Chen Shi.
+This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, and Chen Shi.
 
 Please follow the instructions to run the code.
 
@@ -85,8 +85,8 @@ Action recognition results on standalone RNN models:
 3. Get our pre-trained models: 
    - Action Recognition on UCF-101: [Google Drive](https://drive.google.com/open?id=1VwLjA0pNyPrSBtbbW_XwtYl6tYtBQwkT), [Baidu Pan](https://pan.baidu.com/s/1tqcZ9t38Cif8baHAVeGibw)
    - Action Anticipation on UCF-101: [Google Drive](https://drive.google.com/open?id=1AiSrdfB23h_vkxjqhGpO5ATXNqhempC-), [Baidu Pan](https://pan.baidu.com/s/1Het_IiZpJMA7sProYUZGSA)
-   - Action Recognition on HMDB-51: Google Drive, Baidu Pan
-   - Action Anticipation on HMDB-51: Google Drive, Baidu Pan
+   - Action Recognition on HMDB-51: [Google Drive](https://drive.google.com/open?id=1qYHFtCbxPiQXgOdOTFKO-hLMUlmFxa9y), [Baidu Pan](https://pan.baidu.com/s/1FJVM-nMmKfWX9q6v75NPPw)
+   - Action Anticipation on HMDB-51: [Google Drive](https://drive.google.com/open?id=1Nm3iomj-rpMuxqCSl9RwxoVM52E05Ehi), [Baidu Pan](https://pan.baidu.com/s/1nXcno-MapGw-bmvxCPMjCQ)
 
 #### Standalone model without backbone
 
