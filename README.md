@@ -130,7 +130,7 @@ Action recognition results on standalone RNN models:
 
    3. Get our pre-trained models: 
 
-      - Action Recognition on Kinetics: [Google Drive](), [Baidu Pan](https://pan.baidu.com/s/1Dvake0_NgpgkyArlA4n_PQ)
+      - Action Recognition on Kinetics: [Google Drive](https://drive.google.com/open?id=1ScgxW7oQEihjVtHK75rjPmmVIyJXMTQ2), [Baidu Pan](https://pan.baidu.com/s/1Dvake0_NgpgkyArlA4n_PQ)
 
 
 
