@@ -144,7 +144,7 @@ for epoch in range(resume_epoch, opt.EPOCH):
             # ###################### overlap coherence loss #######################################################################################
             loss_coherence = torch.zeros(1).cuda()
 
-            # claculate the coherence loss with the previous clip and current clip
+            # calculate the coherence loss with the previous clip and current clip
             if slice != 0:
                 for b in range(out.size()[0]):
                     loss_coherence += loss_overlap_coherence_func(old_overlap[b],
@@ -163,9 +163,9 @@ for epoch in range(resume_epoch, opt.EPOCH):
                 loss_anticipation = anticipation_loss_func(out_beforeMerge, b_action)
 
             # classification loss
-            loss_classification = loss_classification_func(out, b_action[:, -1].long()) + opt.lambdaa * loss_coherence
+            loss_classification = loss_classification_func(out, b_action[:, -1].long())
 
-            loss = loss_classification + loss_coherence + loss_anticipation
+            loss = loss_classification + opt.lambdaa * loss_coherence + loss_anticipation
             loss.backward()
 
         predict_for_mAP = predict_for_mAP

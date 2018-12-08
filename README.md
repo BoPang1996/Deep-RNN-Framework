@@ -92,12 +92,12 @@ Action recognition results on standalone RNN models:
 
 0. Dependencies:
 
-     - Python 2.7
-     - Pytorch 0.4
-     - torchvision
-     - Numpy
-     - Pillow
-     - tqdm
+      - Python 2.7
+      - Pytorch 0.4
+      - torchvision
+      - Numpy
+      - Pillow
+      - tqdm
 
 1. Download Kinetics-400 from the [official website](https://deepmind.com/research/open-source/open-source-datasets/kinetics/) or from the copy of [facebookresearch/video-nonlocal-net](https://github.com/facebookresearch/video-nonlocal-net/blob/master/DATASET.md), and organize the image files (from the videos) the same as  UCF101 and HMDB:
 
@@ -116,17 +116,21 @@ Action recognition results on standalone RNN models:
 
       ```
       # start from scratch
-      python train.py 
+      python main.py --train 
       
       # start from our pre-trained model
-      python train.py --model_path [path_to_model] --model_name [model's name] --resume
+      python main.py --model_path [path_to_model] --model_name [model's name] --resume --train
       ```
 
    2. Run the following command to test.
 
       ```
-      python test.py
+      python main.py --test
       ```
+
+   3. Get our pre-trained models: 
+
+      - Action Recognition on Kinetics: [Google Drive](), [Baidu Pan]()
 
 
 
