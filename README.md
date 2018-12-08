@@ -130,7 +130,7 @@ Action recognition results on standalone RNN models:
 
    3. Get our pre-trained models: 
 
-      - Action Recognition on Kinetics: [Google Drive](), [Baidu Pan]()
+      - Action Recognition on Kinetics: [Google Drive](), [Baidu Pan](https://pan.baidu.com/s/1Dvake0_NgpgkyArlA4n_PQ)
 
 
 
@@ -233,9 +233,6 @@ python train.py --gpu_id 0 --batch_size 1  --lr 0.0001 --pretrained False
 ```
 python test.py --gpu_id 0 --batch_size 128 --model (model_path)
 ```
-
-5. Get our pretrained model.
-   - Polygon-RNN on Cityscapes: [Google Drive](https://drive.google.com/open?id=1O5XNWdj7lkyiA0boR-RuN4zGxO6OHQ6y), [Baidu Pan](https://pan.baidu.com/s/1QkKW3YdLrpzKk6RMXPGWiQ)
 
 ## Video Future Prediction
 
@@ -343,11 +340,11 @@ Special thanks for the source code of [MCnet](https://github.com/rubenvillegas/i
 Please cite these papers in your publications if it helps your research:
 
 ```
-@article{pang2018deep,
-  title={Deep RNN Framework for Visual Sequential Applications},
-  author={Pang, Bo and Zha, Kaiwen and Cao, Hanwen and Shi, Chen and Lu, Cewu},
-  journal={arXiv preprint arXiv:1811.09961},
-  year={2018}
-}
+@article{pang2018deeprnn
+ title = {Deep RNN Framework for Visual Sequential Applications}，
+ author = {Bo, Pang and Kaiwen, Zha and Hanwen, Cao and Chen, Shi, and Cewu, Lu},
+ journal = {arXiv preprint}
+ year = {2018}
+ }
 ```
 
