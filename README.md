@@ -112,7 +112,7 @@ Action recognition results on standalone RNN models:
 
 2. Running train.py and test.py for training and evaluation respectively. In this standalone model, we only commit the action recognition task:
 
-   1. Run the following command to train.
+   a. Run the following command to train.
 
       ```
       # start from scratch
@@ -122,17 +122,15 @@ Action recognition results on standalone RNN models:
       python main.py --model_path [path_to_model] --model_name [model's name] --resume --train
       ```
 
-   2. Run the following command to test.
+   b. Run the following command to test.
 
       ```
       python main.py --test
       ```
 
-   3. Get our pre-trained models: 
+3. Get our pre-trained models: 
 
       - Action Recognition on Kinetics: [Google Drive](https://drive.google.com/open?id=1ScgxW7oQEihjVtHK75rjPmmVIyJXMTQ2), [Baidu Pan](https://pan.baidu.com/s/1Dvake0_NgpgkyArlA4n_PQ)
-
-
 
 ## Auxiliary Annotation (Polygon-RNN)
 
@@ -233,6 +231,9 @@ python train.py --gpu_id 0 --batch_size 1  --lr 0.0001 --pretrained False
 ```
 python test.py --gpu_id 0 --batch_size 128 --model [model_path]
 ```
+
+5. Get our pre-trained models: 
+   - Deep Polygon-RNN on Cityscapes: [Google Drive](https://drive.google.com/open?id=1O5XNWdj7lkyiA0boR-RuN4zGxO6OHQ6y), [Baidu Pan](https://pan.baidu.com/s/1QkKW3YdLrpzKk6RMXPGWiQ)
 
 ## Video Future Prediction
 
