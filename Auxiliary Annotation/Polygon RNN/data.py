@@ -126,7 +126,7 @@ def data_divider(label_array, num_slice):
 	start_id = 0
 	stride = (last_id - first_id) / (num_slice - 1)
 	for i in range(1, num_slice - 1):
-		new_label_array[i] = label_array[(start_id + i * stride): (start_id + i * stride + slice_length)]
+		new_label_array[i] = label_array[int(start_id + i * stride): int(start_id + i * stride + slice_length)]
 		start_point[i] = start_id + i * stride
 		end_point[i] = start_id + i * stride + slice_length
 

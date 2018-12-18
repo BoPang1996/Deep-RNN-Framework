@@ -1,6 +1,6 @@
 # Deep RNN Framework
 
-This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, and Chen Shi.
+This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, Chen Shi, and Cewu Lu.
 
 Please follow the instructions to run the code.
 
@@ -231,7 +231,7 @@ python train.py --gpu_id 0 --batch_size 1  --lr 0.0001 --pretrained False
 4. Run the following command to test.
 
 ```
-python test.py --gpu_id 0 --batch_size 128 --model (model_path)
+python test.py --gpu_id 0 --batch_size 128 --model [model_path]
 ```
 
 ## Video Future Prediction
@@ -300,7 +300,7 @@ python train_kth_multigpu.py --gpu 0 1 2 3 4 5 6 7 --batch_size 8 --lr 0.0001
 3. Testing
 
 ```
-python test_kth.py --gpu 0 --prefix (checkpoint_folder) --p (checpoint_index)
+python test_kth.py --gpu 0 --prefix [checkpoint_folder] --p [checkpoint_index]
 ```
 
 

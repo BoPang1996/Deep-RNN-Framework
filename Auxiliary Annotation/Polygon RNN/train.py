@@ -14,7 +14,7 @@ def loss_overlap_coherence_function(pre, cur):
 	return mse_loss(cur, pre.detach())
 
 
-parser = argparse.ArgumentParser(description='manual to this script')
+parser = argparse.ArgumentParser(description='manual to train script')
 parser.add_argument('--gpu_id', nargs='+', type=int)
 parser.add_argument('--batch_size', type=int, default=1)
 parser.add_argument('--pretrained', type=str, default='False')
@@ -33,6 +33,7 @@ lbd = 0.8
 epoch_r = 5
 loss_step = 100
 root_path = "/Disk8/kevin/Cityscapes/"
+user_path = "/home/kevin/polygon-release"
 
 Dataloader = load_data(num, 'train', 60, root_path, batch_size)
 len_dl = len(Dataloader)
@@ -50,7 +51,10 @@ if args.pretrained == 'True':
 	print('Loading model...')
 	net.load_state_dict(torch.load(root_path + 'save/4_50000.pth', map_location=mapping_location))
 else:
-	os.system('rm -rf /home/kevin/polygon-release/log')
+	os.system('rm -rf {}/log'.format(user_path))
+
+if not os.path.isfile('{}/control'.format(user_path)):
+	os.system('touch {}/control'.format(user_path))
 
 print('finished')
 
@@ -122,15 +126,18 @@ for epoch in range(epoch_r):
 			mAccuarcy = np.mean(np.array(accur))
 			accur = []
 
-			with open('/home/kevin/polygon-release/log', 'a') as outfile:
-				print >> outfile, 'Epoch: {}  Step: {}  Loss_C: {}  Loss_O: {}  Loss: {} mAccuracy: {}'.format(epoch,
-				                                                                                               step,
-				                                                                                               loss_coherence.data.cpu().numpy(),
-				                                                                                               loss_objective.data.cpu().numpy(),
-				                                                                                               loss.data.cpu().numpy(),
-				                                                                                               mAccuarcy)
+			with open('{}/log'.format(user_path), 'a') as outfile:
+				print('Epoch: {}  Step: {}  Loss_C: {}  Loss_O: {}  Loss: {} mAccuracy: {}'.format(epoch,
+				                                                                                   step,
+				                                                                                   loss_coherence.data.cpu().numpy()[
+					                                                                                   0],
+				                                                                                   loss_objective.data.cpu().numpy(),
+				                                                                                   loss.data.cpu().numpy()[
+					                                                                                   0],
+				                                                                                   mAccuarcy),
+				      file=outfile)
 
-			with open('/home/kevin/polygon-release/control', "r") as infile:
+			with open('{}/control'.format(user_path), "r") as infile:
 				content = infile.readline()
 				if content == "stop" or content == "stop\n":
 					print("Saving Model...")

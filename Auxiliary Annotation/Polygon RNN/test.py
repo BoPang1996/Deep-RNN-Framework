@@ -9,16 +9,14 @@ import json
 import os
 from glob import glob
 
-parser = argparse.ArgumentParser(description='manual to this script')
+parser = argparse.ArgumentParser(description='manual to test script')
 parser.add_argument('--gpu_id', nargs='+', type=int)
 parser.add_argument('--batch_size', type=int, default=128)
-parser.add_argument('--num', type=int, default=50000)
 parser.add_argument('--model', type=str)
 args = parser.parse_args()
 
 devices = args.gpu_id
 batch_size = args.batch_size
-num = args.num
 
 root_path = "/Disk8/kevin/Cityscapes/"
 mapping_location = {'cuda:1': 'cuda:' + str(devices[0]), 'cuda:2': 'cuda:' + str(devices[0]),
@@ -128,21 +126,22 @@ with torch.no_grad():
 				error_flag = False
 
 			with open(output_path, 'a') as outfile:
-				print >> outfile, "[{}] IoU: {}".format(index[i], IOU_ultimate)
+				print("[{}] IoU: {}".format(index[i], IOU_ultimate), file=outfile)
 
 			print("[{}] IoU: {}".format(index[i], IOU_ultimate))
 
 	for cls in selected_classes:
 		iou_mean = np.mean(np.array(iou[cls]))
 		with open(output_path, 'a') as outfile:
-			print >> outfile, "IoU of Class [" + cls + "]: " + str(iou_mean) + "		NUM = " + str(len(iou[cls]))
+			print("IoU of Class [" + cls + "]: " + str(iou_mean) + "		NUM = " + str(len(iou[cls])), file=outfile)
 		print("IoU of Class [" + cls + "]: " + str(iou_mean) + "		NUM = " + str(len(iou[cls])))
 
 	with open(output_path, 'a') as outfile:
-		print >> outfile, "IoU of [Mean]: " + str(np.mean(np.array(total))) + "		TOTAL_NUM = " + str(len(total))
-		print >> outfile, "IoU of [Mean](wto errors): " + str(
-			np.mean(np.array(total_wto_error))) + "		TOTAL_NUM = " + str(len(total_wto_error))
-		print >> outfile, "error_num: " + str(error_num)
+		print("IoU of [Mean]: " + str(np.mean(np.array(total))) + "		TOTAL_NUM = " + str(len(total)),
+		      file=outfile)
+		print("IoU of [Mean](wto errors): " + str(
+			np.mean(np.array(total_wto_error))) + "		TOTAL_NUM = " + str(len(total_wto_error)), file=outfile)
+		print("error_num: " + str(error_num), file=outfile)
 	print("IoU of [Mean]: " + str(np.mean(np.array(total))) + "		TOTAL_NUM = " + str(len(total)))
 	print("IoU of [Mean](wto errors): " + str(np.mean(np.array(total_wto_error))) + "		TOTAL_NUM = " + str(
 		len(total_wto_error)))
