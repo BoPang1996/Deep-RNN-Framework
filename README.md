@@ -341,11 +341,11 @@ Special thanks for the source code of [MCnet](https://github.com/rubenvillegas/i
 Please cite these papers in your publications if it helps your research:
 
 ```
-@article{pang2018deeprnn
- title = {Deep RNN Framework for Visual Sequential Applications}，
- author = {Bo, Pang and Kaiwen, Zha and Hanwen, Cao and Chen, Shi, and Cewu, Lu},
- journal = {arXiv preprint}
- year = {2018}
- }
+@article{pang2018deep,
+  title={Deep RNN Framework for Visual Sequential Applications},
+  author={Pang, Bo and Zha, Kaiwen and Cao, Hanwen and Shi, Chen and Lu, Cewu},
+  journal={arXiv preprint arXiv:1811.09961},
+  year={2018}
+}
 ```
 
