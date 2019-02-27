@@ -330,7 +330,7 @@ print(results['ssim'].mean(axis=0))
 
 ## Contributors
 
-Deep RNN framework is authored by [Bo Pang](https://github.com/BoPang1996), [Kaiwen Zha](https://github.com/Sunshine-KaiwenZha), Hanwen Cao, Chen Shi and [Cewu Lu](http://mvig.sjtu.edu.cn/). Note that Cewu Lu is the corresponding author.  
+Deep RNN framework is authored by [Bo Pang](https://github.com/BoPang1996), [Kaiwen Zha](https://github.com/KaiwenZha), Hanwen Cao, Chen Shi and [Cewu Lu](http://mvig.sjtu.edu.cn/). Note that Cewu Lu is the corresponding author.  
 
 ## Acknowledgements
 
