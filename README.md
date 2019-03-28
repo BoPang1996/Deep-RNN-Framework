@@ -1,6 +1,6 @@
 # Deep RNN Framework
 
-This is the code for the paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, Chen Shi, and Cewu Lu.
+This is the code for **CVPR 2019** paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, Chen Shi, and Cewu Lu.
 
 Please follow the instructions to run the code.
 
