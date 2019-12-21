@@ -10,7 +10,7 @@ Please follow the instructions to run the code.
 
 ## Overview
 
-[Deep-RNN Framework](https://github.com/BoPang1996/Deep-RNN-Framework/) is a RNN framework for high-dimensional sequential tasks and in this repository we focus on the visualtasks. The deep-RNN framework achieves **more than 11% relative improvements** over shallow RNN models on Kinetics, UCF-101, and HMDB-51 for **video classification**. For **auxiliary annotation**, after replacing the shallow RNN part of Polygon-RNN with our 15-layer deep CBM (alias in code: RBM), **the performance improves by 14.7%**. For **video future prediction**, our deep RNN improves the state-of-the-art shallow model's performance by **2.4% on PSNR and SSIM**.
+[Deep RNN Framework](https://github.com/BoPang1996/Deep-RNN-Framework/) is a RNN framework for high-dimensional squence problems and in this repository we focus on the visual tasks. The Deep RNN Framework achieves **more than 11% relative improvements** over shallow RNN models on Kinetics, UCF-101, and HMDB-51 for **video classification**. For **auxiliary annotation**, after replacing the shallow RNN part of Polygon-RNN with our 15-layer deep CBM (alias in code: RBM), **the performance improves by 14.7%**. For **video future prediction**, our Deep RNN Framework improves the state-of-the-art shallow model's performance by **2.4% on PSNR and SSIM**.
 
 ## Action Recognition and Anticipation
 
