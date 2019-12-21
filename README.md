@@ -6,7 +6,7 @@ Please follow the instructions to run the code.
 
 ## News
 
-- A auxiliary annotation software that runs the vertex prediction kernel with our Deep RNN Framework (remarkably enhancing the annotation quality compared with Polygon-RNN) was released! Try the demo!
+- A **auxiliary annotation software** that runs the vertex prediction kernel with our Deep RNN Framework (remarkably enhancing the annotation quality compared with Polygon-RNN) was released! Try the demo!
 
 ## Overview
 
