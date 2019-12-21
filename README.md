@@ -1,12 +1,16 @@
 # Deep RNN Framework
 
-This is the code for **CVPR 2019** paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) by Bo Pang, Kaiwen Zha, Hanwen Cao, Chen Shi, and Cewu Lu.
+This project implements **Deep RNN Framework** of paper [Deep RNN Framework for Visual Sequential Applications](https://arxiv.org/abs/1811.09961) **(CVPR 2019)**.
 
 Please follow the instructions to run the code.
 
+## News
+
+- A auxiliary annotation software that runs the vertex prediction kernel with our Deep RNN Framework (remarkably enhancing the annotation quality compared with Polygon-RNN) was released! Try the demo!
+
 ## Overview
 
-[Deep-RNN Framework](https://github.com/BoPang1996/Deep-RNN-Framework/) is a RNN framework for high-dimensional sequential tasks and in this repository we focus on the visualtasks. The deep-RNN framework achieves **more than 11% relative improvements** over shallow RNN models on Kinetics, UCF-101, and HMDB-51 for **video classification**. For **auxiliary annotation**, after replacing the shallow RNN part of Polygon-RNN with our 15-layer deep RBM, **the performance improves by 14.7%**. For **video future prediction**, our deep RNN improves the state-of-the-art shallow model's performance by **2.4% on PSNR and SSIM**.
+[Deep-RNN Framework](https://github.com/BoPang1996/Deep-RNN-Framework/) is a RNN framework for high-dimensional sequential tasks and in this repository we focus on the visualtasks. The deep-RNN framework achieves **more than 11% relative improvements** over shallow RNN models on Kinetics, UCF-101, and HMDB-51 for **video classification**. For **auxiliary annotation**, after replacing the shallow RNN part of Polygon-RNN with our 15-layer deep CBM (alias in code: RBM), **the performance improves by 14.7%**. For **video future prediction**, our deep RNN improves the state-of-the-art shallow model's performance by **2.4% on PSNR and SSIM**.
 
 ## Action Recognition and Anticipation
 
@@ -36,7 +40,7 @@ Action recognition results on standalone RNN models:
 
 #### Model with Backbone
 
-0. Dependencies:
+1. Dependencies:
 
      - Python 2.7
      - Pytorch 0.4
@@ -45,7 +49,7 @@ Action recognition results on standalone RNN models:
      - Pillow
      - tqdm
 
-1. Download [UCF101](http://crcv.ucf.edu/data/UCF101.php) and [HMDB](http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and organize the image files (from the videos) as follows:
+2. Download [UCF101](http://crcv.ucf.edu/data/UCF101.php) and [HMDB](http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) and organize the image files (from the videos) as follows:
 
    ```
    Dataset
@@ -70,7 +74,7 @@ Action recognition results on standalone RNN models:
    │   ├── ...
    ```
 
-2. Running train.py and test.py for training and evaluation respectively. By default, the code runs for action recognition and you can assign "--anticipation" for action anticipation:
+3. Running train.py and test.py for training and evaluation respectively. By default, the code runs for action recognition and you can assign "--anticipation" for action anticipation:
 
    ```
    # for action recognition
@@ -82,7 +86,7 @@ Action recognition results on standalone RNN models:
    python test.py --anticipation
    ```
 
-3. Get our pre-trained models: 
+4. Get our pre-trained models: 
    - Action Recognition on UCF-101: [Google Drive](https://drive.google.com/open?id=1VwLjA0pNyPrSBtbbW_XwtYl6tYtBQwkT), [Baidu Pan](https://pan.baidu.com/s/1tqcZ9t38Cif8baHAVeGibw)
    - Action Anticipation on UCF-101: [Google Drive](https://drive.google.com/open?id=1AiSrdfB23h_vkxjqhGpO5ATXNqhempC-), [Baidu Pan](https://pan.baidu.com/s/1Het_IiZpJMA7sProYUZGSA)
    - Action Recognition on HMDB-51: [Google Drive](https://drive.google.com/open?id=1qYHFtCbxPiQXgOdOTFKO-hLMUlmFxa9y), [Baidu Pan](https://pan.baidu.com/s/1FJVM-nMmKfWX9q6v75NPPw)
@@ -132,7 +136,7 @@ Action recognition results on standalone RNN models:
 
       - Action Recognition on Kinetics: [Google Drive](https://drive.google.com/open?id=1ScgxW7oQEihjVtHK75rjPmmVIyJXMTQ2), [Baidu Pan](https://pan.baidu.com/s/1Dvake0_NgpgkyArlA4n_PQ)
 
-## Auxiliary Annotation (Polygon-RNN)
+## Auxiliary Annotation (Polygon Vertex Prediction)
 
 ### Results
 
@@ -327,10 +331,6 @@ results = np.load('<results_file_name>')
 print(results['psnr'].mean(axis=0))
 print(results['ssim'].mean(axis=0))
 ```
-
-## Contributors
-
-Deep RNN framework is authored by [Bo Pang](https://github.com/BoPang1996), [Kaiwen Zha](https://github.com/KaiwenZha), Hanwen Cao, Chen Shi and [Cewu Lu](http://mvig.sjtu.edu.cn/). Note that Cewu Lu is the corresponding author.  
 
 ## Acknowledgements
 

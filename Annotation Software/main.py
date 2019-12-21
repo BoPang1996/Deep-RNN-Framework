@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 
 import sys
 from PyQt5 import QtWidgets, QtCore, QtGui
@@ -20,7 +19,6 @@ cur_ins_id = 0
 # screen shot
 class WScreenShot(QWidget):
     win = ''
-    # 自定义图片保存路径
     save_path = "../images/save.jpg"
 
     @classmethod
@@ -44,7 +42,6 @@ class WScreenShot(QWidget):
         self.startPoint = QPoint()
         self.endPoint = QPoint()
 
-    # 自定义绘画事件
     def paintEvent(self, event):
         if self.isDrawing:
             self.mask = self.blackMask.copy()

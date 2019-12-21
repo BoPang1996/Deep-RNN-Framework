@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-# 作者：曹瀚文
-
 import torch
 import torch.nn.init
 import torch.utils.model_zoo as model_zoo
