@@ -23,8 +23,8 @@ Results on backbone supported models:
 |                   | Recognition | Anticipation | Recognition | Anticipation |
 | 1-layer LSTM      | 71.1        | 30.6         | 36.0        | 18.8         |
 | 15-layer ConvLSTM | 68.9        | 49.6         | 34.2        | 27.6         |
-| 1-layer RBM       | 65.3        | 28.4         | 34.3        | 16.9         |
-| **15-layer RBM**  | **79.8**    | **57.7**     | **40.2**    | **32.1**     |
+| 1-layer CBM       | 65.3        | 28.4         | 34.3        | 16.9         |
+| **15-layer CBM**  | **79.8**    | **57.7**     | **40.2**    | **32.1**     |
 
 Action recognition results on standalone RNN models:
 
@@ -34,7 +34,7 @@ Action recognition results on standalone RNN models:
 | C3D                           | 56.1     | 79.9    | 49.4    |
 | Two-Stream                    | 62.8     | 93.8    | 64.3    |
 | 3D-Fused                      | 62.3     | 91.5    | 66.5    |
-| **Deep RBM without Backbone** | 60.2     | 91.9    | 61.7    |
+| **Deep CBM without Backbone** | 60.2     | 91.9    | 61.7    |
 
 ### Usage
 
@@ -154,10 +154,10 @@ Results on Cityscapes dataset:
 | Polyg-LSTM                                 | 5             | 2.94M                | 63.0     |
 | Polyg-LSTM                                 | 10            | 7.07M                | 59.3     |
 | Polyg-LSTM                                 | 15            | 15.71M               | 46.7     |
-| Polyg-RBM                                  | 2             | 0.20M                | 59.9     |
-| Polyg-RBM                                  | 5             | 1.13M                | 63.1     |
-| Polyg-RBM                                  | 10            | 2.68M                | 67.1     |
-| **Polyg-RBM**                              | 15            | 5.85M                | **70.4** |
+| Polyg-CBM                                  | 2             | 0.20M                | 59.9     |
+| Polyg-CBM                                  | 5             | 1.13M                | 63.1     |
+| Polyg-CBM                                  | 10            | 2.68M                | 67.1     |
+| **Polyg-CBM**                              | 15            | 5.85M                | **70.4** |
 
 ### Usage
 
